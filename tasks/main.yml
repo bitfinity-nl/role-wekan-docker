@@ -10,4 +10,9 @@
 #   Role for provisioning an WeKan server
 #   with docker.
 #
-- 
+- name: 
+
+- name: "Pull an (latest) docker image from wekanteam/wekan"
+  community.docker.docker_image:
+    name: wekanteam/wekan:latest
+    source: pull
