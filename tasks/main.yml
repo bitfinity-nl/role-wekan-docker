@@ -10,9 +10,17 @@
 #   Role for provisioning an WeKan server
 #   with docker.
 #
-- name: 
-
 - name: "Pull an (latest) docker image from wekanteam/wekan"
   community.docker.docker_image:
     name: wekanteam/wekan:latest
     source: pull
+
+- name: "Create directory for WeKan (/opt/wekan)"
+  file:
+    path: /opt/wekan
+    state: directory
+
+- name: "Download docker-compose.yml file from (https://github.com/wekan/wekan/tree/main)"
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/wekan/wekan/main/docker-compose.yml
+    dest: /opt/wekan/docker-compose.yml
