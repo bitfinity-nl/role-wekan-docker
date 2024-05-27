@@ -1,0 +1,13 @@
+---
+# Title: WeKan - Open-Source Kanban
+# 
+# Author: Bitfinity / L. Rutten
+# Owner: Bitfinity / L. Rutten
+#
+# File: tasks/main.yml
+#
+# Description:
+#   Role for provisioning an WeKan server
+#   with docker.
+#
+- 
